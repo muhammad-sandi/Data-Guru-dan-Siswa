@@ -32,6 +32,12 @@ $routes->set404Override();
  * Route Definitions
  * --------------------------------------------------------------------
  */
+$routes->get('/siswa', 'Siswa::index');
+$routes->get('/siswa/create', 'Siswa::create');
+$routes->post('/siswa/store', 'Siswa::store');
+$routes->get('siswa/edit/(:num)', 'Siswa::edit/$1');
+$routes->post('siswa/update/(:num)', 'Siswa::update/$1');
+$routes->get('siswa/delete/(:num)', 'Siswa::delete/$1');
 
 // We get a performance increase by specifying the default
 // route since we don't have to scan directories.

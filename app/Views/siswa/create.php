@@ -1,10 +1,13 @@
 <?= $this->extend('layout/template'); ?>
 <?= $this->section('content'); ?>
+<div class="main-content">
+    <section class="section">
+        <div class="section-header">
+            <h1>Tambah Data Siswa</h1>
+        </div>
+
 <div class="container">
     <div class="card">
-        <div class="card-header">
-            <h3>Tambah Data Siswa</h3>
-        </div>
         <div class="card-body">
             <?php if (!empty(session()->getFlashdata('error'))) : ?>
                 <div class="alert alert-danger alert-dismissible fade show" role="alert">

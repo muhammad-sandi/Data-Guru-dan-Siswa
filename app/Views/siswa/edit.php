@@ -1,10 +1,14 @@
 <?= $this->extend('layout/template'); ?>
 <?= $this->section('content'); ?>
-<div class="container">
-    <div class="card">
-        <div class="card-header">
-            <h3>Update Data Siswa</h3>
+
+<div class="main-content">
+    <section class="section">
+        <div class="section-header">
+            <h1>Edit Data Siswa</h1>
         </div>
+
+<div class="content">
+    <div class="card">
         <div class="card-body">
             <?php if (!empty(session()->getFlashdata('error'))) : ?>
                 <div class="alert alert-danger alert-dismissible fade show" role="alert">
@@ -59,4 +63,5 @@
         </div>
     </div>
 </div>
+            </div>
 <?= $this->endSection('content'); ?>

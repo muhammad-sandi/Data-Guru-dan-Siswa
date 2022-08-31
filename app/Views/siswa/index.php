@@ -1,10 +1,14 @@
 <?= $this->extend('layout/template'); ?>
 <?= $this->section('content'); ?>
-<div class="container">
-    <div class="card">
-        <div class="card-header">
-            <h3>Data Siswa</h3>
+
+<div class="main-content">
+    <section class="section">
+        <div class="section-header">
+            <h1>Data Siswa</h1>
         </div>
+        
+<div class="content">
+    <div class="card">
         <div class="card-body">
             <?php if (!empty(session()->getFlashdata('message'))) : ?>
                 <div class="alert alert-success alert-dismissible fade show" role="alert">
@@ -14,8 +18,7 @@
                     </button>
                 </div>
             <?php endif; ?>
-            <a href="<?= base_url('/siswa/create'); ?>" class="btn btn-primary">Tambah</a>
-            <hr />
+            <a href="<?= base_url('/siswa/create'); ?>" class="btn btn-primary mb-3">Tambah</a>
             <table class="table table-bordered">
                 <tr>
                     <th>No</th>
@@ -40,8 +43,8 @@
                         <td><?= $row->email; ?></td>
                         <td><?= $row->alamat; ?></td>
                         <td>
-                            <a title="Edit" href="<?= base_url("siswa/edit/$row->id_siswa"); ?>" class="btn btn-info">Edit</a>
-                            <a title="Delete" href="<?= base_url("siswa/delete/$row->id_siswa") ?>" class="btn btn-danger" onclick="return confirm('Apakah Anda yakin ingin menghapus data ?')">Delete</a>
+                            <a title="Edit" href="<?= base_url("siswa/edit/$row->id_siswa"); ?>" class="btn btn-info  mt-2">Edit</a>
+                            <a title="Delete" href="<?= base_url("siswa/delete/$row->id_siswa") ?>" class="btn btn-danger mb-2 mt-2" onclick="return confirm('Apakah Anda yakin ingin menghapus data ?')">Delete</a>
                         </td>
                     </tr>
                 <?php
